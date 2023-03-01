@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="container-fluid bg-info">
+        <h2><i class="mdi mdi-menu"></i>Ice Cream</h2>
+    </header>
+
+    <main class="container">
+        <section class="row text-center g-3 mt-1">
+            <h2>Choose a Flavor</h2>
+            <div id="flavors" class="col-4">
+                <div class="card border-0">
+                    <h3>Cookie Dough</h3>
+                    <img src="https://celebratingsweets.com/wp-content/uploads/2014/04/Cookie-Dough-Ice-Cream-1-5.jpg"
+                        alt="cookie dough">
+                    <div class="text-center"><button class="btn btn-outline-primary"
+                            onclick="addCookieDough(iceCream)">Select</button></div>
+                </div>
+            </div>
+            <div id="flavors" class="col-4">
+                <div class="card border-0">
+                    <h3>Strawberry</h3>
+                    <img src="https://www.realfoodwithjessica.com/wp-content/uploads/2017/07/paleostrawberryicecream2.jpg"
+                        alt="Strawberry">
+                        <div class="text-center"><button class="btn btn-outline-primary"
+                            onclick="addStrawberry(iceCream)">Select</button></div>
+                </div>
+            </div>
+            <div id="flavors" class="col-4">
+                <div class="card border-0">
+                    <h3>Vanilla</h3>
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ultimate-vanilla-ice-cream-1628511695.jpg"
+                        alt="Vanilla">
+                        <div class="text-center"><button class="btn btn-outline-primary"
+                            onclick="addVanilla(iceCream)">Select</button></div>
+                </div>
+            </div>
+        </section>
+        <section class="row text-center g-3 mt-1">
+            <h2>Choose a Topping</h2>
+            <div id="toppings" class="col-6 card border-0 p-1">
+                <h3>Chocolate Chips</h3>
+                <img src="https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/chocolate-chips.jpg?quality=82&strip=1&resize=640%2C360"
+                    alt="">
+                    <div class="text-center"><button class="btn btn-outline-primary"
+                        onclick="addChocolateChips(toppings)">Select</button></div>
+            </div>
+            <div id="toppings" class="col-6 card border-0 p-1">
+                <h3>Sprinkles</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Sprinkles2.jpg" alt="">
+                <div class="text-center"><button class="btn btn-outline-primary"
+                    onclick="addSprinkles(toppings)">Select</button></div>
+            </div>
+        </section>
+        <section class="row text-center g-3 mt-1 mb-4">
+            <h2>Choose a Container</h2>
+            <div id="containers" class="col-6 card border-0 p-1">
+                <h3>Waffle Cone</h3>
+                <img src="https://m.media-amazon.com/images/I/71VNjBMakfL._SL1500_.jpg" alt="">
+                <div class="text-center"><button class="btn btn-outline-primary"
+                    onclick="addWaffleCone(containers)">Select</button></div>
+            </div>
+            <div id="containers" class="col-6 card border-0 p-1">
+                <h3>Waffle Bowl</h3>
+                <img src="http://images.wbmason.com/350/L_JOY66050.jpg" alt="">
+                <div class="text-center"><button class="btn btn-outline-primary"
+                    onclick="addWaffleBowl(containers)">Select</button></div>
+            </div>
+        </section>
+        <div id="items" class="row text-center g-3 mt-1 mb-4">
+            <div class="col-12 card border-0 p-2">
+                <div></div>
+                <b></b>
+                <b></b>
+                <h2>Is this your ice cream</h2>
+                <button onclick="drawCartFlavor()">Confirm</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="row container-fluid bg-info">
+            text
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

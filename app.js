@@ -80,12 +80,15 @@ function addWaffleBowl(containers) {
 }
 
 function drawFlavors(iceCream){
-    const flavorElem = document.getElementById("flavors")
+    let total = 0
     let template = ''
     iceCream.forEach(flavor => {
-        template += `${flavor.price}`
+        total += flavor.price * flavor.quantity
+        if (flavor.quantity) {
+            template += `${flavor.name}`
+        }
     })
-    flavorElem.innerText = template
+    
 }
 
 function drawToppings(toppings) {

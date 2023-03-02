@@ -46,6 +46,13 @@ function addFlavor(flavor) {
     console.log(myFlavor);
 }
 
+function addTopping(topping) {
+    console.log(topping);
+    const myTopping = toppings.find(x => x.name === topping)
+    myTopping.quantity++
+    console.log(myTopping);
+}
+
 function addCookieDough(){
     const flavorName = iceCream.find(flavor => flavor.name === 'Cookie Dough')
 
@@ -108,13 +115,22 @@ function drawFlavors(){
     document.getElementById('flavors').innerHTML = template
 }
 
-function drawToppings(toppings) {
-    const toppingElem = document.getElementById("toppings")
+function drawToppings() {
+    let total = 0
     let template = ''
     toppings.forEach(topping => {
-        template += `${topping.price}`
+        template += `
+        <div class="col-6 col-sm-12">
+            <div class="card border-0">
+                <h3>${topping.name}</h3>
+                <img src="${topping.image}">
+                <div class="text-center"><button class="btn btn-outline-primary"
+                        onclick="addTopping('${topping.name}')">Select</button></div>
+            </div>
+        </div>
+        `
     })
-    toppingElem.innerText = template
+    document.getElementById('toppings').innerHTML = template
 }
 
 function drawContainers(containers) {

@@ -17,12 +17,38 @@
     </header>
 
     <main class="container">
-        <h2>Choose a Flavor</h2>
-        <section id="flavors" class="row text-center g-3 mt-1">
-            
-        </section>
-        <h2>Choose a Topping</h2>
         <section class="row text-center g-3 mt-1">
+            <h2>Choose a Flavor</h2>
+            <div id="flavors" class="col-4">
+                <div class="card border-0">
+                    <h3>Cookie Dough</h3>
+                    <img src="https://celebratingsweets.com/wp-content/uploads/2014/04/Cookie-Dough-Ice-Cream-1-5.jpg"
+                        alt="cookie dough">
+                    <div class="text-center"><button class="btn btn-outline-primary"
+                            onclick="addCookieDough(iceCream)">Select</button></div>
+                </div>
+            </div>
+            <div id="flavors" class="col-4">
+                <div class="card border-0">
+                    <h3>Strawberry</h3>
+                    <img src="https://www.realfoodwithjessica.com/wp-content/uploads/2017/07/paleostrawberryicecream2.jpg"
+                        alt="Strawberry">
+                        <div class="text-center"><button class="btn btn-outline-primary"
+                            onclick="addStrawberry(iceCream)">Select</button></div>
+                </div>
+            </div>
+            <div id="flavors" class="col-4">
+                <div class="card border-0">
+                    <h3>Vanilla</h3>
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ultimate-vanilla-ice-cream-1628511695.jpg"
+                        alt="Vanilla">
+                        <div class="text-center"><button class="btn btn-outline-primary"
+                            onclick="addVanilla(iceCream)">Select</button></div>
+                </div>
+            </div>
+        </section>
+        <section class="row text-center g-3 mt-1">
+            <h2>Choose a Topping</h2>
             <div id="toppings" class="col-6 card border-0 p-1">
                 <h3>Chocolate Chips</h3>
                 <img src="https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/chocolate-chips.jpg?quality=82&strip=1&resize=640%2C360"
@@ -54,9 +80,9 @@
         </section>
         <div id="items" class="row text-center g-3 mt-1 mb-4">
             <div class="col-12 card border-0 p-2">
-                <b>name</b>
-                <b>quantity</b>
-                <b>price</b>
+                <div></div>
+                <b></b>
+                <b></b>
                 <h2>Is this your ice cream</h2>
                 <button onclick="drawCartFlavor()">Confirm</button>
             </div>
@@ -69,7 +95,6 @@
         </div>
     </footer>
 
-    <script src="app.js"></script>
 </body>
 
 </html>

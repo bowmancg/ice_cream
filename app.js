@@ -39,10 +39,18 @@ const containers = [{
     quantity: 0
 }]
 
-function addCookieDough(iceCream){
+function addFlavor(flavor) {
+    console.log(flavor);
+    const myFlavor = iceCream.find(x => x.name === flavor)
+    myFlavor.quantity++
+    console.log(myFlavor);
+}
+
+function addCookieDough(){
     const flavorName = iceCream.find(flavor => flavor.name === 'Cookie Dough')
+
     console.log(flavorName.name);
-    drawFlavors()
+    // drawFlavors()
 }
 
 function addStrawberry(iceCream) {
@@ -79,16 +87,25 @@ function addWaffleBowl(containers) {
     drawContainers()
 }
 
-function drawFlavors(iceCream){
+function drawFlavors(){
     let total = 0
     let template = ''
     iceCream.forEach(flavor => {
         total += flavor.price * flavor.quantity
         if (flavor.quantity) {
-            template += `${flavor.name}`
         }
+        template += `
+        <div class="col-4 col-sm-12">
+            <div class="card border-0">
+                <h3>${flavor.name}</h3>
+                <img src="${flavor.image}">
+                <div class="text-center"><button class="btn btn-outline-primary"
+                        onclick="addFlavor('${flavor.name}')">Select</button></div>
+            </div>
+        </div>
+        `
     })
-    
+    document.getElementById('flavors').innerHTML = template
 }
 
 function drawToppings(toppings) {
@@ -116,7 +133,7 @@ function drawCartFlavor() {
         total += item.price * item.quantity
         if (item.quantity) {
             template += `
-            <div class="col-12 card border-0 p-2">
+            <div class="col-12 col-sm-12 card border-0 p-2">
                 <div>${item.image}</div>
                 <b>${item.name}</b>
                 <b>${item.price}</b>
@@ -128,3 +145,5 @@ function drawCartFlavor() {
     })
     document.getElementById('items').innerHTML = template
 }
+
+drawFlavors()
